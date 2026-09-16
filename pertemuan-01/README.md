@@ -1,12 +1,4 @@
-# pertemuan-01
-Nama: Ricky Hanserrico
-
-NIM: 2611500010
-
-Kelompok: TI1A
-
-Tahun Ajaran: 2026/2027 Gasal\
-
+# Bukti Belajar P1
 
 1. Konsep Dasar Pemrograman Web
 pemrograman web itu proses membuat website atau aplikasi yang dapat diakses melalui internet menggunakan browser atau sejenisnya
