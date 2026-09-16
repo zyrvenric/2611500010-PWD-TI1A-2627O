@@ -1,2 +1,11 @@
-# 2611500010-PWD-TI1A-2627O
-Repository Latihan Pertemuan-1 sampai dengan Pertemuan-16 Matakuliah Pemrograman Web Dasar Kelompok TI1A Tahun Ajaran 2025/2026 Semester Gasal
+# Pemrograman Web Dasar
+
+Nama: Ricky Hanserico
+
+NIM: 2611500010
+
+Kelompok: TI1A
+
+Tahun Ajaran: 2026/2027 Gasal
+
+Repository ini digunakan untuk mendokumentasikan perkembangan pembelajaran mata kuiah Pemrokraman Web Dasar dari Pertemuan 1 sampai dengan Pertemuan 16.
