@@ -17,8 +17,4 @@ elemen semantik, teks, daftar, tautan, dan gambar.
 - Hasil validasi akhir: [✅ Document checking completed. No errors or warnings to show. ]
 
 ## GitHub Pages
-<<<<<<< HEAD
 URL: https://zyrvenric.github.io/2611500010-PWD-TI1A-2627O/pertemuan-02
-=======
-URL: https://zyrvenric.github.io/2611500010-PWD-TI1A-2627O/pertemuan-02
->>>>>>> 04739abc0f7568a18b3a8d1d7504d8b0e510b0ee
