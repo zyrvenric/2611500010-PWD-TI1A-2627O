@@ -27,5 +27,5 @@
 - Hasil pengujian ulang: [Formulir dapat digunakan dengan baik]
 
 ## GitHub Pages
-URL: [tempel URL GitHub Pages Pertemuan 3]
+URL: https://zyrvenric.github.io/2611500010-PWD-TI1A-2627O/pertemuan-03/
  
