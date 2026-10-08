@@ -7,7 +7,7 @@ Halaman profil mahasiswa sederhana untuk memperkenalkan Ricky Hanserico. Halaman
 - Perubahan yang dilakukan: menyusun halaman profil mahasiswa dengan navigasi, konten profil, formulir kontak, footer, serta tata letak responsif menggunakan CSS Grid dan media query.
 - Commit dan push GitHub: di lakukan setiap perubahan atau setiap bertahap
 
-## Pengujian dan Validasi.
+## Pengujian dan Validasi
 - Pemeriksaan CSS: jumlah kurung kurawal seimbang (33 pasang) dan tanda kurung fungsi seimbang (4 pasang); aturan grid dua kolom dan breakpoint 768 piksel terdeteksi.
 - Perbaikan: kolom grid desktop menggunakan `minmax(0, 1fr)` untuk membantu mencegah konten melebar keluar kolom. Ditambahkan indikator fokus keyboard serta efek hover untuk navigasi dan tombol.
 - Pengujian visual: tampilan web yang diuji dengan setiap ukuran yang berbeda menghasilkan tampilan layar web sesuai dengan ukuran yang diminta. Untuk Tampilan Dekstop sendiri, bagian 'beranda' dan 'Tentang' letaknya bersampingan, sedangkan untuk tampilan Ponsel semua 'Section' tersusun dalam satu kolom.Form tidak melebar keluar layar dan gambar menyesuaikan lebar kotak.
