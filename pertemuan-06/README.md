@@ -145,3 +145,13 @@ Hasil pengujian: Isi sesuai hasil pengujian yang benar-benar dilakukan.
 - Membuka halaman melalui localhost.
 - Memastikan tahun, nama mahasiswa, dan NIM tampil sesuai hasil aktual.
 
+## H.4 — Sintaks Keluaran Singkat PHP
+
+### Perubahan
+- Menggunakan sintaks `<?= ?>` untuk menampilkan konstanta `PROFIL_GITHUB`.
+- Menggunakan sintaks keluaran singkat untuk menampilkan tahun, nama mahasiswa, dan NIM pada footer.
+
+### Pengujian
+- Memeriksa tautan GitHub.
+- Memeriksa tampilan tahun, nama mahasiswa, dan NIM pada footer.
+
