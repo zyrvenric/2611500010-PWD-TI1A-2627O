@@ -8,6 +8,7 @@
 </head>
 <body>
 <?php
+$catatanTambahan = "Catatan praktik PHP";
 $ipk = 0.00;
 $semester = 1;
 $batasSemester = 8;
@@ -76,6 +77,7 @@ $statusAktif = true;
             <article>
                 <h3>Profil Singkat</h3>
                 <p>IPK: <?php echo number_format($ipk, 2, ',', '.'); ?></p>
+                <p>Catatan tambahan: <?php echo $catatanTambahan === null ? "Belum ada" : $catatanTambahan; ?></p>
                 <p>Sisa semester hingga batas: <?php echo $sisaSemester; ?></p>
                 <p>Semester: <?php echo $semester . " (" . $keteranganSemester . ")"; ?></p>
                 <p>Program Studi: <?php echo $namaProdi . " (" . $programStudi . ")"; ?></p>

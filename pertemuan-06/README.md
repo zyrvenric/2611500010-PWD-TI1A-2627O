@@ -122,4 +122,16 @@ Hasil pengujian: Isi sesuai hasil pengujian yang benar-benar dilakukan.
 
 ### Pengujian
 - Membuka halaman melalui localhost.
-- Memastikan IPK tampil sebagai `3,75`.
+- Memastikan IPK tampil sebagai `0.00`.
+
+## H.2 — Memeriksa Nilai NULL
+
+### Perubahan
+- Menambahkan variabel `$catatanTambahan` dengan nilai `null`.
+- Menggunakan operator identik `===` dan ternary untuk menentukan teks yang ditampilkan.
+
+### Pengujian
+- Menguji nilai `null`, yang menampilkan `Belum ada`.
+- Menguji teks `Catatan praktik PHP`.
+- Mengembalikan nilai variabel menjadi `null`.
+
