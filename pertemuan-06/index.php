@@ -221,7 +221,7 @@ for ($i = 1; $i <= 5; $i++) {
     </main>
 
     <footer>
-        <p>&copy; 2026 Ricky Hanserico-[2611500010]</p>
+          <p>&copy; <?php echo date("Y"); ?> Ricky Hanserico-[2611500010]</p>
     </footer>
     <script src="script.js"></script> 
 </body>

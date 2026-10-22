@@ -135,3 +135,13 @@ Hasil pengujian: Isi sesuai hasil pengujian yang benar-benar dilakukan.
 - Menguji teks `Catatan praktik PHP`.
 - Mengembalikan nilai variabel menjadi `null`.
 
+## H.3 — Menampilkan Tahun dengan Fungsi date()
+
+### Perubahan
+- Menggunakan `date("Y")` untuk menampilkan tahun secara dinamis pada footer.
+- Mempertahankan nama mahasiswa dan NIM pada footer.
+
+### Pengujian
+- Membuka halaman melalui localhost.
+- Memastikan tahun, nama mahasiswa, dan NIM tampil sesuai hasil aktual.
+
