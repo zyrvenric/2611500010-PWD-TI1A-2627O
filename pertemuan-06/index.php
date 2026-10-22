@@ -7,12 +7,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <?php
-// Pengujian awal eksekusi PHP.
-echo "PHP berhasil dijalankan.";
-
-print "Keluaran menggunakan print.";
-
+<p>Konten HTML statis.</p>
+<?php
+echo "<p>Konten yang dihasilkan oleh PHP.</p>";
 ?>
     <header>
         <h1>Profil Mahasiswa</h1>
