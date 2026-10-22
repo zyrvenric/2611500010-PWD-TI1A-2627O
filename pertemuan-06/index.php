@@ -11,6 +11,16 @@
 $semester = 1;
 $batasSemester = 8;
 $sisaSemester = $batasSemester - $semester;
+if ($semester < 3) {
+    $keteranganSemester = "Semester awal";
+} elseif ($semester <= 6) {
+    $keteranganSemester = "Semester menengah";
+} else {
+    $keteranganSemester = "Semester akhir";
+}
+$programStudi = "SI";
+$namaProdi = ($programStudi == "SI") ? "Sistem Informasi" : (($programStudi == "TI") ? "Teknik Informatika" : "Lainnya");
+$statusAktif = true;
 $namaMahasiswa = "Ricky Hanserico";
 $mataKuliah = "Pemrograman Web Dasar";
 $tahunAkademik = "2026/2027";
@@ -52,6 +62,9 @@ define("PROFIL_GITHUB", "zyrvenric");
             <article>
                 <h3>Profil Singkat</h3>
                 <p>Sisa semester hingga batas: <?php echo $sisaSemester; ?></p>
+                <p>Semester: <?php echo $semester . " (" . $keteranganSemester . ")"; ?></p>
+                <p>Program Studi: <?php echo $namaProdi . " (" . $programStudi . ")"; ?></p>
+<p>Status mahasiswa: <?php echo $statusAktif ? "Aktif" : "Tidak aktif"; ?></p>
                 <p>Saya mahasiswa Program Studi Teknik Informatika.</p>
 
                 <h3>Target Belajar</h3>
