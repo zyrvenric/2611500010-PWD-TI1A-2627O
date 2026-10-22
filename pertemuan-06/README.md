@@ -21,3 +21,29 @@
 - PHP dinamis: ...
 - Hasil pengujian pada browser: ...
 - Hasil pemeriksaan Page Source (Ctrl+U): ...
+
+Bagian D.4 — Penggunaan Variabel dan Konstanta
+
+Perubahan
+
+Menggunakan variabel $namaMahasiswa untuk menampilkan nama mahasiswa.
+
+Menggunakan variabel $mataKuliah untuk menampilkan nama mata kuliah.
+
+Menggunakan variabel $tahunAkademik untuk menampilkan tahun akademik.
+
+Menggunakan konstanta PROFIL_GITHUB untuk membentuk tautan profil GitHub.
+
+Pengujian
+
+Menjalankan halaman index.php melalui localhost.
+
+Memeriksa tampilan nama mahasiswa, mata kuliah, dan tahun akademik.
+
+Memeriksa tautan profil GitHub agar mengarah ke akun yang sesuai.
+
+Hasil pengujian: Isi setelah pengujian selesai dengan hasil aktual.
+
+Git
+
+Perubahan disimpan menggunakan Git dan dikirim ke repositori GitHub setelah kode dan dokumentasi diperiksa.

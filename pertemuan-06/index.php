@@ -7,9 +7,12 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<p>Konten HTML statis.</p>
 <?php
-echo "<p>Konten yang dihasilkan oleh PHP.</p>";
+$namaMahasiswa = "Ricky Hanserico";
+$mataKuliah = "Pemrograman Web Dasar";
+$tahunAkademik = "2026/2027";
+
+define("PROFIL_GITHUB", "zyrvenric");
 ?>
     <header>
         <h1>Profil Mahasiswa</h1>
@@ -36,7 +39,8 @@ echo "<p>Konten yang dihasilkan oleh PHP.</p>";
      <main>
             <section id="home">
             <h2>Selamat Datang</h2>
-            <p>Halo, saya Ricky Hanserico. Saya sedang mempelajari Pemrograman Web Dasar.</p>
+            <p>Halo, saya <strong><?php echo $namaMahasiswa; ?></strong>. Saya sedang mempelajari mata kuliah
+<strong><?php print $mataKuliah; ?></strong> pada tahun akademik <?php echo $tahunAkademik; ?>.</p>
             <img src="img/foto-profil.jpg" alt="Foto Profil" width="200">
         </section>
 
@@ -57,7 +61,10 @@ echo "<p>Konten yang dihasilkan oleh PHP.</p>";
 
         <section id="contact">
             <h2>Kontak</h2>
-            <p>Kunjungi <a href="https://github.com/zyrvenric">profil GitHub saya</a>.</p>
+           <p>
+    Kunjungi
+    <a target="_blank" href="https://github.com/<?= PROFIL_GITHUB ?>">profil GitHub saya</a>.
+</p>
 
             <form id="contactForm" action="index.php" method="get">
                 <div class="form-group">
