@@ -113,3 +113,13 @@ Hasil pengujian: Isi sesuai hasil pengujian yang benar-benar dilakukan.
 ### Pengujian
 - Membuka halaman melalui localhost.
 - Memastikan Semester 1, Semester 2, dan Semester 3 tampil.
+
+## H.1 — Menampilkan IPK dengan number_format()
+
+### Perubahan
+- Menambahkan variabel `$ipk` dengan nilai `3.75`.
+- Menggunakan `number_format()` untuk menampilkan IPK dengan dua angka desimal, koma sebagai pemisah desimal, dan titik sebagai pemisah ribuan.
+
+### Pengujian
+- Membuka halaman melalui localhost.
+- Memastikan IPK tampil sebagai `3,75`.

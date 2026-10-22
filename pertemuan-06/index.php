@@ -8,6 +8,7 @@
 </head>
 <body>
 <?php
+$ipk = 0.00;
 $semester = 1;
 $batasSemester = 8;
 $sisaSemester = $batasSemester - $semester;
@@ -74,6 +75,7 @@ $statusAktif = true;
             <h2>Tentang Saya</h2>
             <article>
                 <h3>Profil Singkat</h3>
+                <p>IPK: <?php echo number_format($ipk, 2, ',', '.'); ?></p>
                 <p>Sisa semester hingga batas: <?php echo $sisaSemester; ?></p>
                 <p>Semester: <?php echo $semester . " (" . $keteranganSemester . ")"; ?></p>
                 <p>Program Studi: <?php echo $namaProdi . " (" . $programStudi . ")"; ?></p>
