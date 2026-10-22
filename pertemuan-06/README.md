@@ -77,3 +77,19 @@ Hasil pengujian: Isi sesuai hasil pengujian yang benar-benar dilakukan.
 
 - Menentukan nama program studi berdasarkan kode prodi.
 - Menampilkan status mahasiswa berdasarkan nilai boolean
+
+## F.3 — Percabangan switch-case-default
+
+### Perubahan
+- Menambahkan percabangan `switch-case-default` untuk menentukan fokus program studi.
+- Program studi `SI` menampilkan fokus Sistem informasi dan proses bisnis.
+- Program studi `TI` menampilkan fokus Komputasi dan pengembangan perangkat lunak.
+- Nilai selain `SI` dan `TI` menampilkan Belum ditentukan.
+
+### Pengujian
+- Menguji `$programStudi = "SI"` melalui localhost.
+- Menguji `$programStudi = "TI"` melalui localhost.
+- Menguji `$programStudi = "MI"` melalui localhost.
+- Mengembalikan nilai akhir menjadi `$programStudi = "TI"`.
+
+**Hasil pengujian:** Isi sesuai hasil aktual yang ditampilkan localhost.

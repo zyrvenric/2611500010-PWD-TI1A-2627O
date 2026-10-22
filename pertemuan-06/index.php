@@ -18,12 +18,12 @@ if ($semester < 3) {
 } else {
     $keteranganSemester = "Semester akhir";
 }
-$programStudi = "SI";
+$programStudi = "TI";
 $namaProdi = ($programStudi == "SI") ? "Sistem Informasi" : (($programStudi == "TI") ? "Teknik Informatika" : "Lainnya");
 // Bagian 4: Percabangan switch-case-default
 switch ($programStudi) {
     case "SI":
-        $fokusProgramStudi = "Sistem informasi dan proses bisnis";
+        $fokusProgramStudi = "Sistem informasi dan manajemen data";
         break;
     case "TI":
         $fokusProgramStudi = "Komputasi dan pengembangan perangkat lunak";
@@ -37,6 +37,8 @@ $mataKuliah = "Pemrograman Web Dasar";
 $tahunAkademik = "2026/2027";
 
 define("PROFIL_GITHUB", "zyrvenric");
+$programStudi = "TI";
+$statusAktif = true;
 ?>
     <header>
         <h1>Profil Mahasiswa</h1>
@@ -63,7 +65,7 @@ define("PROFIL_GITHUB", "zyrvenric");
      <main>
             <section id="home">
             <h2>Selamat Datang</h2>
-            <p>Halo, saya <strong><?php echo $namaMahasiswa; ?></strong>. Saya sedang mempelajari mata kuliah
+                <p>Halo, saya <strong><?php echo $namaMahasiswa; ?></strong>. Saya sedang mempelajari mata kuliah
 <strong><?php print $mataKuliah; ?></strong> pada tahun akademik <?php echo $tahunAkademik; ?>.</p>
             <img src="img/foto-profil.jpg" alt="Foto Profil" width="200">
         </section>
@@ -75,8 +77,8 @@ define("PROFIL_GITHUB", "zyrvenric");
                 <p>Sisa semester hingga batas: <?php echo $sisaSemester; ?></p>
                 <p>Semester: <?php echo $semester . " (" . $keteranganSemester . ")"; ?></p>
                 <p>Program Studi: <?php echo $namaProdi . " (" . $programStudi . ")"; ?></p>
-<p>Status mahasiswa: <?php echo $statusAktif ? "Aktif" : "Tidak aktif"; ?></p>
-<p>Fokus program studi: <?php echo $fokusProgramStudi; ?></p>
+                <p>Status mahasiswa: <?php echo $statusAktif ? "Aktif" : "Tidak aktif"; ?></p>
+                <p>Fokus program studi: <?php echo $fokusProgramStudi; ?></p>
 
                 <p>Saya mahasiswa Program Studi Teknik Informatika.</p>
 
@@ -91,15 +93,16 @@ define("PROFIL_GITHUB", "zyrvenric");
 
         <section id="contact">
             <h2>Kontak</h2>
-           <p>
+        <p>
     Kunjungi
     <a target="_blank" href="https://github.com/<?= PROFIL_GITHUB ?>">profil GitHub saya</a>.
-</p>
+        </p>
 
             <form id="contactForm" action="index.php" method="get">
                 <div class="form-group">
-                    <label for="nama">Nama Lengkap</label><br>
-                    <input class="input-form"
+                    <label  for="nama">Nama Lengkap</label><br>
+                    <input 
+                            class="input-form"
                             type="text"
                             id="nama"
                             name="nama"
@@ -110,8 +113,9 @@ define("PROFIL_GITHUB", "zyrvenric");
                 </div>
 
                 <div class="form-group">
-                    <label for="email">Email</label><br>
-                    <input class="input-form"
+                    <label  for="email">Email</label><br>
+                    <input 
+                            class="input-form"
                             type="email"
                             id="email"
                             name="email"
@@ -120,19 +124,21 @@ define("PROFIL_GITHUB", "zyrvenric");
                 </div>
 
                 <div class="form-group">
-                    <label for="semester">semester</label><br>
-                    <input class="input-form"
+                    <label  for="semester">semester</label><br>
+                    <input 
+                            class="input-form"
                             type="number"
                             id="semester"
                             name="semester"
                             min="1"
-                            max="14"
+                            max="8"
                             required>
                 </div>
 
                 <div class="form-group">
-                    <label for="tanggal">tanggal kunjungan</label><br>
-                    <input class="input-form"
+                    <label  for="tanggal">tanggal kunjungan</label><br>
+                    <input 
+                            class="input-form"
                             type="date"
                             id="tanggal"
                             name="tanggal"
