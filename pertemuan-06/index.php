@@ -55,7 +55,7 @@
             <h2>Kontak</h2>
             <p>Kunjungi <a href="https://github.com/zyrvenric">profil GitHub saya</a>.</p>
 
-            <form id="contactForm" action="index.html" method="get">
+            <form id="contactForm" action="index.php" method="get">
                 <div class="form-group">
                     <label for="nama">Nama Lengkap</label><br>
                     <input class="input-form"
