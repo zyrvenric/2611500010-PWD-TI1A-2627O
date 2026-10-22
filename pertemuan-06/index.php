@@ -8,6 +8,9 @@
 </head>
 <body>
 <?php
+$semester = 1;
+$batasSemester = 8;
+$sisaSemester = $batasSemester - $semester;
 $namaMahasiswa = "Ricky Hanserico";
 $mataKuliah = "Pemrograman Web Dasar";
 $tahunAkademik = "2026/2027";
@@ -48,6 +51,7 @@ define("PROFIL_GITHUB", "zyrvenric");
             <h2>Tentang Saya</h2>
             <article>
                 <h3>Profil Singkat</h3>
+                <p>Sisa semester hingga batas: <?php echo $sisaSemester; ?></p>
                 <p>Saya mahasiswa Program Studi Teknik Informatika.</p>
 
                 <h3>Target Belajar</h3>
