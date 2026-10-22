@@ -92,4 +92,14 @@ Hasil pengujian: Isi sesuai hasil pengujian yang benar-benar dilakukan.
 - Menguji `$programStudi = "MI"` melalui localhost.
 - Mengembalikan nilai akhir menjadi `$programStudi = "TI"`.
 
-**Hasil pengujian:** Isi sesuai hasil aktual yang ditampilkan localhost.
+## G.1 — Perulangan for untuk Target Belajar
+
+### Perubahan
+- Mengganti daftar target belajar statis dengan perulangan `for`.
+- Menggunakan `switch` untuk menentukan teks setiap target.
+- Menampilkan lima target belajar.
+
+### Pengujian
+- Membuka halaman melalui localhost.
+- Memastikan lima target belajar tampil sesuai modul.
+
