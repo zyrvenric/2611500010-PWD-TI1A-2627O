@@ -103,3 +103,13 @@ Hasil pengujian: Isi sesuai hasil pengujian yang benar-benar dilakukan.
 - Membuka halaman melalui localhost.
 - Memastikan lima target belajar tampil sesuai modul.
 
+## G.2 — Perulangan while untuk Nomor Semester
+
+### Perubahan
+- Menambahkan perulangan `while` untuk menampilkan nomor semester.
+- Menggunakan `$nomorSemester` sebagai penghitung.
+- Menambahkan `$nomorSemester++` agar perulangan berhenti setelah semester 3.
+
+### Pengujian
+- Membuka halaman melalui localhost.
+- Memastikan Semester 1, Semester 2, dan Semester 3 tampil.

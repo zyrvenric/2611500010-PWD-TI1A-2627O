@@ -83,6 +83,16 @@ $statusAktif = true;
                 <p>Saya mahasiswa Program Studi Teknik Informatika.</p>
 
                 <h3>Target Belajar (Perulangan for)</h3>
+                <h3>Semester (Perulangan while)</h3>
+<ol>
+<?php
+$nomorSemester = 1;
+while ($nomorSemester <= 3) {
+    echo "<li>Semester " . $nomorSemester . "</li>";
+    $nomorSemester++;
+}
+?>
+</ol>
 <ol>
 <?php
 for ($i = 1; $i <= 5; $i++) {
