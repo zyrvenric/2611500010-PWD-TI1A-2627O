@@ -7,6 +7,13 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <?php
+// Pengujian awal eksekusi PHP.
+echo "PHP berhasil dijalankan.";
+
+print "Keluaran menggunakan print.";
+
+?>
     <header>
         <h1>Profil Mahasiswa</h1>
         <nav>
