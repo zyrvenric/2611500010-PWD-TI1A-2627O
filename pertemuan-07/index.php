@@ -1,4 +1,120 @@
+<?php
+session_start();
 
+function escapeHtml($value): string
+{
+    return htmlspecialchars((string) $value, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
+}
+
+$nama = '';
+$email = '';
+$semesterForm = '';
+$jenisPesan = '';
+$prodi = '';
+$pesan = '';
+$tanggal = '';
+$minat = [];
+$pesanKesalahan = [];
+$pesanBerhasil = false;
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $nama = trim((string) ($_POST['nama'] ?? ''));
+    $email = trim((string) ($_POST['email'] ?? ''));
+    $semesterForm = trim((string) ($_POST['semester'] ?? ''));
+    $jenisPesan = trim((string) ($_POST['jenis_pesan'] ?? ''));
+    $prodi = trim((string) ($_POST['prodi'] ?? ''));
+    $pesan = trim((string) ($_POST['pesan'] ?? ''));
+    $tanggal = trim((string) ($_POST['tanggal'] ?? ''));
+    $minatInput = $_POST['minat'] ?? [];
+    $minatDiizinkan = ['HTML', 'CSS'];
+
+    if ($nama === '' || strlen($nama) < 3 || strlen($nama) > 50) {
+        $pesanKesalahan[] = 'Nama lengkap wajib diisi antara 3 dan 50 karakter.';
+    }
+    if ($email === '' || filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
+        $pesanKesalahan[] = 'Masukkan alamat email yang valid.';
+    }
+
+    $semesterAngka = filter_var($semesterForm, FILTER_VALIDATE_INT);
+    if ($semesterAngka === false || $semesterAngka < 1 || $semesterAngka > 14) {
+        $pesanKesalahan[] = 'Semester harus berupa bilangan bulat antara 1 dan 14.';
+    }
+
+    $tanggalObjek = DateTime::createFromFormat('!Y-m-d', $tanggal);
+    if (
+        $tanggalObjek === false ||
+        $tanggalObjek->format('Y-m-d') !== $tanggal
+    ) {
+        $pesanKesalahan[] = 'Tanggal kunjungan tidak valid.';
+    }
+    if (!in_array($jenisPesan, ['pertanyaan', 'saran'], true)) {
+        $pesanKesalahan[] = 'Pilih jenis pesan yang valid.';
+    }
+    if (!in_array($prodi, ['SI', 'TI'], true)) {
+        $pesanKesalahan[] = 'Pilih program studi yang valid.';
+    }
+    if (!is_array($minatInput)) {
+        $pesanKesalahan[] = 'Format pilihan topik tidak valid.';
+        $minat = [];
+    } else {
+        $minat = array_values(array_intersect($minatInput, $minatDiizinkan));
+        if (count($minat) !== count($minatInput)) {
+            $pesanKesalahan[] = 'Pilihan topik tidak valid.';
+        }
+        if ($minat === []) {
+            $pesanKesalahan[] = 'Pilih minimal satu topik yang diminati.';
+        }
+    }
+    if ($pesan === '' || strlen($pesan) > 300) {
+        $pesanKesalahan[] = 'Pesan wajib diisi dan maksimal 300 karakter.';
+    }
+
+    $_SESSION['form'] = [
+        'nama' => $nama,
+        'email' => $email,
+        'semester' => $semesterForm,
+        'jenis_pesan' => $jenisPesan,
+        'prodi' => $prodi,
+        'pesan' => $pesan,
+        'tanggal' => $tanggal,
+        'minat' => $minat,
+    ];
+    $_SESSION['pesanKesalahan'] = $pesanKesalahan;
+    $_SESSION['pesanBerhasil'] = $pesanKesalahan === [];
+
+    header('Location: index.php');
+    exit;
+}
+
+$form = $_SESSION['form'] ?? [];
+$nama = $form['nama'] ?? '';
+$email = $form['email'] ?? '';
+$semesterForm = $form['semester'] ?? '';
+$jenisPesan = $form['jenis_pesan'] ?? '';
+$prodi = $form['prodi'] ?? '';
+$pesan = $form['pesan'] ?? '';
+$tanggal = $form['tanggal'] ?? '';
+$minat = $form['minat'] ?? [];
+$pesanKesalahan = $_SESSION['pesanKesalahan'] ?? [];
+$pesanBerhasil = $_SESSION['pesanBerhasil'] ?? false;
+unset($_SESSION['pesanKesalahan'], $_SESSION['pesanBerhasil']);
+
+$nim = '2611500010';
+$namaMahasiswa = 'Ricky Hanserico';
+$programStudi = 'TI';
+$tahunAkademik = '2026/2027';
+$semester = 1;
+$ipk = 0.00;
+$statusAktif = true;
+$catatanTambahan = null;
+const NAMA_MATA_KULIAH = 'Pemrograman Web Dasar';
+const PROFIL_GITHUB = 'zyrvenric';
+
+$batasSemester = 8;
+$sisaSemester = $batasSemester - $semester;
+$semesterValid = $semester >= 1 && $semester <= $batasSemester;
+$statusSemester = ($semesterValid && $statusAktif) ? 'Sesuai rentang' : 'Perlu diperiksa';
+?>
 <!doctype html>
 <html lang="id">
 <head>
