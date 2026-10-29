@@ -114,6 +114,29 @@ $batasSemester = 8;
 $sisaSemester = $batasSemester - $semester;
 $semesterValid = $semester >= 1 && $semester <= $batasSemester;
 $statusSemester = ($semesterValid && $statusAktif) ? 'Sesuai rentang' : 'Perlu diperiksa';
+
+if ($semester < 3) {
+    $keteranganSemester = 'Semester awal';
+} elseif ($semester <= 6) {
+    $keteranganSemester = 'Semester menengah';
+} else {
+    $keteranganSemester = 'Semester akhir';
+}
+
+$namaProdi = $programStudi === 'SI'
+    ? 'Sistem Informasi'
+    : ($programStudi === 'TI' ? 'Teknik Informatika' : 'Lainnya');
+
+switch ($programStudi) {
+    case 'SI':
+        $fokusProgramStudi = 'Sistem informasi dan proses bisnis';
+        break;
+    case 'TI':
+        $fokusProgramStudi = 'Komputasi dan pengembangan perangkat lunak';
+        break;
+    default:
+        $fokusProgramStudi = 'Belum ditentukan';
+}
 ?>
 <!doctype html>
 <html lang="id">
