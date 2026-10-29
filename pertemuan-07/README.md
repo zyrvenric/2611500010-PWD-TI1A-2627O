@@ -14,3 +14,14 @@ Menerapkan pengiriman formulir dengan metode POST, validasi JavaScript dan PHP, 
 Nyalakan Apache melalui Laragon, lalu buka:
 http://localhost/pwd/2627o/ti1a/2611500010-PWD-TI1A-2627O/pertemuan-07/
 
+# Hasil Pengujian
+
+- php -l index.php — lulus, tidak ada kesalahan sintaks (PHP 8.3).
+- node --check script.js — lulus, tidak ada kesalahan sintaks.
+- Uji GET melalui server PHP lokal — menerima HTTP 200.
+- Uji POST valid — redirect dan menampilkan status berhasil serta ringkasan.
+- Uji masukan HTML — karakter HTML di-escape saat ditampilkan kembali.
+
+## Catatan Git
+
+README diperbarui untuk tahap pemeriksaan, implementasi, dan pengujian. Seluruh perubahan pertemuan 7 dipublikasikan setelah pemeriksaan selesai.
