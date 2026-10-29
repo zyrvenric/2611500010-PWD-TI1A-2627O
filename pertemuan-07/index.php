@@ -179,8 +179,38 @@ switch ($programStudi) {
         <h2>Tentang Saya</h2>
         <article>
             <h3>Profil Singkat</h3>
+            <p>Program Studi: <?= escapeHtml($namaProdi . ' (' . $programStudi . ')') ?></p>
+            <p>Fokus program studi: <?= escapeHtml($fokusProgramStudi) ?></p>
+            <p>Status mahasiswa: <?= $statusAktif ? 'Aktif' : 'Tidak aktif' ?></p>
+            <p>Semester: <?= escapeHtml($semester . ' (' . $keteranganSemester . ')') ?></p>
+            <p>Sisa semester hingga batas: <?= escapeHtml($sisaSemester) ?></p>
+            <p>Pemeriksaan rentang semester: <?= escapeHtml($statusSemester) ?></p>
+            <p>IPK: <?= number_format($ipk, 2, ',', '.') ?></p>
+            <p>Catatan tambahan: <?= escapeHtml($catatanTambahan ?? 'Belum ada') ?></p>
+            <h3>Target Belajar (Perulangan for)</h3>
             <ol>
-               
+                <?php
+                for ($i = 1; $i <= 5; $i++) {
+                    echo '<li>Target belajar ke-' . $i . ': ';
+                    switch ($i) {
+                        case 1:
+                            echo 'Memahami sintaks dasar PHP.';
+                            break;
+                        case 2:
+                            echo 'Menggunakan variabel dan konstanta.';
+                            break;
+                        case 3:
+                            echo 'Menerapkan operator dan percabangan.';
+                            break;
+                        case 4:
+                            echo 'Menggunakan perulangan for dan while.';
+                            break;
+                        default:
+                            echo 'Belum dipetakan';
+                    }
+                    echo '</li>';
+                }
+                ?>
             </ol>
             <h3>Semester (Perulangan while):</h3>
             <ol>
