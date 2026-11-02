@@ -2,37 +2,94 @@
 session_start();
 
 // P7: Memproses data formulir dan menyimpannya ke dalam session.
+
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-	$nama = trim((string) ($_POST["nama"] ?? ""));
-	$email = trim((string) ($_POST["email"] ?? ""));
-	$semesterForm = trim((string) ($_POST["semester"] ?? ""));
-	$tanggal = trim((string) ($_POST["tanggal"] ?? ""));
-	$jenisPesan = trim((string) ($_POST["jenis_pesan"] ?? ""));
-	$minat = $_POST["minat"] ?? [];
-	$prodi = trim((string) ($_POST["prodi"] ?? ""));
-	$pesan = trim((string) ($_POST["pesan"] ?? ""));
 
-	// Checkbox dapat mengirimkan lebih dari satu nilai.
-	if (!is_array($minat)) {
-		$minat = [];
-	}
+    // Memproses Formulir Rencana Kegiatan
+    if (isset($_POST["submit_rencana"])) {
 
-	// Menyimpan setiap nilai formulir ke dalam session secara terpisah.
-	$_SESSION["nama"] = $nama;
-	$_SESSION["email"] = $email;
-	$_SESSION["semester"] = $semesterForm;
-	$_SESSION["tanggal"] = $tanggal;
-	$_SESSION["jenis_pesan"] = $jenisPesan;
-	$_SESSION["minat"] = $minat;
-	$_SESSION["prodi"] = $prodi;
-	$_SESSION["pesan"] = $pesan;
+        $namaKegiatan = trim((string) ($_POST["nama_kegiatan"] ?? ""));
+        $kategori = trim((string) ($_POST["kategori"] ?? ""));
+        $tanggalKegiatan = trim((string) ($_POST["tanggal_kegiatan"] ?? ""));
+        $lokasi = trim((string) ($_POST["lokasi"] ?? ""));
+        $deskripsi = trim((string) ($_POST["deskripsi"] ?? ""));
 
-	// PRG: mencegah pengiriman POST berulang ketika halaman dimuat ulang.
-	header("Location: index.php#contact");
-	exit;
+        $errors = [];
+
+        // Validasi nama kegiatan
+        if (strlen($namaKegiatan) < 3 || strlen($namaKegiatan) > 100) {
+            $errors[] = "Nama kegiatan harus 3 sampai 100 karakter.";
+        }
+
+        // Validasi kategori
+        $kategoriValid = ["Akademik", "Olahraga", "Seni", "Organisasi", "Sosial"];
+
+        if (!in_array($kategori, $kategoriValid, true)) {
+            $errors[] = "Kategori kegiatan tidak valid.";
+        }
+
+        // Validasi tanggal
+        $tanggalObj = DateTime::createFromFormat("!Y-m-d", $tanggalKegiatan);
+
+        if (!$tanggalObj || $tanggalObj->format("Y-m-d") !== $tanggalKegiatan) {
+            $errors[] = "Tanggal pelaksanaan tidak valid.";
+        }
+
+        // Validasi lokasi
+        if (strlen($lokasi) < 3 || strlen($lokasi) > 150) {
+            $errors[] = "Lokasi harus 3 sampai 150 karakter.";
+        }
+
+        // Validasi deskripsi
+        if ($deskripsi === "" || strlen($deskripsi) > 500) {
+            $errors[] = "Deskripsi wajib diisi dan maksimal 500 karakter.";
+        }
+
+        $_SESSION["rencana_errors"] = $errors;
+
+        if (empty($errors)) {
+            $_SESSION["rencana"] = [
+                "nama_kegiatan" => $namaKegiatan,
+                "kategori" => $kategori,
+                "tanggal_kegiatan" => $tanggalKegiatan,
+                "lokasi" => $lokasi,
+                "deskripsi" => $deskripsi
+            ];
+        }
+
+        header("Location: index.php#rencana-kegiatan");
+        exit;
+
+    } else {
+
+        // Pemrosesan Formulir Kontak yang lama
+        $nama = trim((string) ($_POST["nama"] ?? ""));
+        $email = trim((string) ($_POST["email"] ?? ""));
+        $semesterForm = trim((string) ($_POST["semester"] ?? ""));
+        $tanggal = trim((string) ($_POST["tanggal"] ?? ""));
+        $jenisPesan = trim((string) ($_POST["jenis_pesan"] ?? ""));
+        $minat = $_POST["minat"] ?? [];
+        $prodi = trim((string) ($_POST["prodi"] ?? ""));
+        $pesan = trim((string) ($_POST["pesan"] ?? ""));
+
+        if (!is_array($minat)) {
+            $minat = [];
+        }
+
+        $_SESSION["nama"] = $nama;
+        $_SESSION["email"] = $email;
+        $_SESSION["semester"] = $semesterForm;
+        $_SESSION["tanggal"] = $tanggal;
+        $_SESSION["jenis_pesan"] = $jenisPesan;
+        $_SESSION["minat"] = $minat;
+        $_SESSION["prodi"] = $prodi;
+        $_SESSION["pesan"] = $pesan;
+
+        header("Location: index.php#contact");
+        exit;
+    }
 }
 
-// Mengamankan data sebelum ditampilkan kembali ke halaman HTML.
 // P6: PHP dasar dan pemrograman sisi peladen
 // Bagian 1: Variabel dan konstanta
 $nim = "0344300002";
@@ -104,10 +161,10 @@ switch ($programStudi) {
 
 		<nav>
 			<ul id="navMenu">
-				<li><a href="#rencana">Rencana Kegiatan</a></li>
-				<li><a href="#home">Beranda</a></li>
-				<li><a href="#about">Tentang</a></li>
-				<li><a href="#contact">Kontak</a></li>
+    			<li><a href="#home">Beranda</a></li>
+    			<li><a href="#about">Tentang</a></li>
+    			<li><a href="#rencana-kegiatan">Rencana Kegiatan</a></li>
+    			<li><a href="#contact">Kontak</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -174,6 +231,102 @@ switch ($programStudi) {
 				</ol>
 			</article>
 		</section>
+		<section id="rencana-kegiatan">
+    <h2>Rencana Kegiatan Mahasiswa</h2>
+
+    <p>
+        Silakan isi formulir berikut untuk merencanakan
+        kegiatan mahasiswa.
+    </p>
+
+    <form id="rencanaForm"
+          action="index.php"
+          method="POST"
+          data-validation="rencana">
+
+        <div class="form-group">
+            <label for="nama_kegiatan">Nama Kegiatan</label><br>
+            <input
+                class="input-form"
+                type="text"
+                id="nama_kegiatan"
+                name="nama_kegiatan"
+                minlength="3"
+                maxlength="100"
+                placeholder="Masukkan nama kegiatan"
+                required>
+        </div>
+
+        <div class="form-group">
+            <label for="kategori">Kategori Kegiatan</label><br>
+
+            <select class="input-form"
+                    id="kategori"
+                    name="kategori"
+                    required>
+                <option value="">-- Pilih Kategori --</option>
+                <option value="Akademik">Akademik</option>
+                <option value="Olahraga">Olahraga</option>
+                <option value="Seni">Seni</option>
+                <option value="Organisasi">Organisasi</option>
+                <option value="Sosial">Sosial</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="tanggal_kegiatan">
+                Tanggal Pelaksanaan
+            </label><br>
+
+            <input
+                class="input-form"
+                type="date"
+                id="tanggal_kegiatan"
+                name="tanggal_kegiatan"
+                required>
+        </div>
+
+        <div class="form-group">
+            <label for="lokasi">Lokasi Kegiatan</label><br>
+
+            <input
+                class="input-form"
+                type="text"
+                id="lokasi"
+                name="lokasi"
+                minlength="3"
+                maxlength="150"
+                placeholder="Masukkan lokasi kegiatan"
+                required>
+        </div>
+
+        <div class="form-group">
+            <label for="deskripsi">Deskripsi Kegiatan</label><br>
+
+            <textarea
+                class="input-form"
+                id="deskripsi"
+                name="deskripsi"
+                maxlength="500"
+                placeholder="Jelaskan rencana kegiatan"
+                required></textarea>
+        </div>
+
+        <button type="submit"
+                name="submit_rencana"
+                value="1">
+            Kirim
+        </button>
+
+        <button type="reset">
+            Batal
+        </button>
+
+        <p class="form-feedback"
+           data-form-feedback
+           aria-live="polite"></p>
+    </form>
+</section>
 
 		<section id="contact">
 			<h2>Kontak</h2>
