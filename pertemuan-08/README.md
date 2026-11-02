@@ -33,3 +33,8 @@ menerapkan pola Post/Redirect/Get (PRG) menggunakan header() dan exit untuk meng
 6. menguji formulir Rencana Kegiatan
 melakukan pengujian dan memastikan semua fitur berjalan dengan benar.
 7. Ketika Nama Kegiatan kosong, PHP memasukkan pesan kesalahan ke session. Namun, belum ada kode HTML untuk menampilkan pesan tersebut, jadi saya memperbaiki nya, setelah saya uji lagi ketika saya gak mengisi kolom nama kegiatan muncul "Silakan isi formulir berikut untuk merencanakan kegiatan mahasiswa. Nama kegiatan harus 3 sampai 100 karakter."
+8. melakukan pengujian lagi
+-Pengujian validasi.
+-Pengujian pengiriman data.
+-Pengujian keamanan.
+-Pengujian formulir Kontak.
