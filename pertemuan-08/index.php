@@ -266,7 +266,7 @@ switch ($programStudi) {
                 minlength="3"
                 maxlength="100"
                 placeholder="Masukkan nama kegiatan"
-                
+                required>
         </div>
 
         <div class="form-group">
@@ -338,6 +338,33 @@ switch ($programStudi) {
            data-form-feedback
            aria-live="polite"></p>
     </form>
+	
+    <?php if (isset($_SESSION["rencana"])): ?>
+        <article class="submission-result" aria-live="polite">
+            <h3>Data Rencana Kegiatan yang Dikirim</h3>
+
+            <p><strong>Nama Kegiatan:</strong>
+                <?= htmlspecialchars($_SESSION["rencana"]["nama_kegiatan"], ENT_QUOTES, "UTF-8") ?>
+            </p>
+
+            <p><strong>Kategori:</strong>
+                <?= htmlspecialchars($_SESSION["rencana"]["kategori"], ENT_QUOTES, "UTF-8") ?>
+            </p>
+
+            <p><strong>Tanggal Pelaksanaan:</strong>
+                <?= htmlspecialchars($_SESSION["rencana"]["tanggal_kegiatan"], ENT_QUOTES, "UTF-8") ?>
+            </p>
+
+            <p><strong>Lokasi:</strong>
+                <?= htmlspecialchars($_SESSION["rencana"]["lokasi"], ENT_QUOTES, "UTF-8") ?>
+            </p>
+
+            <p><strong>Deskripsi:</strong>
+                <?= nl2br(htmlspecialchars($_SESSION["rencana"]["deskripsi"], ENT_QUOTES, "UTF-8")) ?>
+            </p>
+        </article>
+    <?php endif; ?>
+
 </section>
 
 		<section id="contact">

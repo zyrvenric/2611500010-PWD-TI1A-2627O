@@ -1,40 +1,54 @@
-1. Menu Navigasi
-Menambahkan satu item menu pada `<ul id="navMenu">`, sebelum menu Kontak
-2. Membuat Formulir Rencana Kegiatan
-menambahkan section Rencana Kegiatan Mahasiswa pada file index.php, tepat sebelum section Kontak.
+## Pengembangan Formulir Rencana Kegiatan Mahasiswa
 
-Formulir memiliki lima input, yaitu:
--Nama Kegiatan
--Kategori Kegiatan
--Tanggal Pelaksanaan
--Lokasi Kegiatan
--Deskripsi Kegiatan
+### 1. Menambahkan Menu Navigasi
+Menambahkan menu **Rencana Kegiatan** pada navbar yang mengarah ke bagian `#rencana-kegiatan`.
 
-3. Menambahkan Pemrosesan Formulir dengan PHP
-menambahkan pemrosesan formulir Rencana Kegiatan menggunakan metode POST.
+### 2. Membuat Formulir Rencana Kegiatan
+Menambahkan section **Rencana Kegiatan Mahasiswa** sebelum section Kontak.
 
-Pemrosesan dibedakan dari formulir Kontak menggunakan isset($_POST["submit_rencana"]), sehingga kedua formulir dapat diproses secara terpisah.
+Formulir memiliki lima kolom:
+- Nama Kegiatan
+- Kategori Kegiatan
+- Tanggal Pelaksanaan
+- Lokasi Kegiatan
+- Deskripsi Kegiatan
 
-Data formulir dibersihkan menggunakan trim() sebelum diproses.
+Formulir menggunakan metode POST dan memiliki tombol Kirim dan Batal.
 
-4. Menambahkan Validasi Sisi Server
-menambahkan validasi PHP untuk memeriksa:
+### 3. Menambahkan Pemrosesan Formulir dengan PHP
+Menambahkan pemrosesan data formulir menggunakan PHP dengan metode POST.
 
-Nama kegiatan harus memiliki panjang 3–100 karakter.
-Kategori kegiatan harus sesuai dengan pilihan yang tersedia.
-Tanggal pelaksanaan harus memiliki format tanggal yang valid.
-lokasi kegiatan harus memiliki panjang 3–150 karakter.
-Deskripsi wajib diisi dan maksimal 500 karakter.
+Data yang diterima dibersihkan menggunakan `trim()` dan disimpan ke dalam session.
 
-Jika tidak ditemukan kesalahan, data formulir disimpan ke dalam $_SESSION["rencana"]. Pesan kesalahan validasi disimpan ke dalam $_SESSION["rencana_errors"].
+Pemrosesan formulir Rencana Kegiatan dibedakan dari formulir Kontak menggunakan `isset($_POST["submit_rencana"])`.
 
-5. Menerapkan Redirect Setelah POST
-menerapkan pola Post/Redirect/Get (PRG) menggunakan header() dan exit untuk mengarahkan pengguna kembali ke bagian Rencana Kegiatan setelah formulir dikirim.
-6. menguji formulir Rencana Kegiatan
-melakukan pengujian dan memastikan semua fitur berjalan dengan benar.
-7. Ketika Nama Kegiatan kosong, PHP memasukkan pesan kesalahan ke session. Namun, belum ada kode HTML untuk menampilkan pesan tersebut, jadi saya memperbaiki nya, setelah saya uji lagi ketika saya gak mengisi kolom nama kegiatan muncul "Silakan isi formulir berikut untuk merencanakan kegiatan mahasiswa. Nama kegiatan harus 3 sampai 100 karakter."
-8. melakukan pengujian lagi
--Pengujian validasi.
--Pengujian pengiriman data.
--Pengujian keamanan.
--Pengujian formulir Kontak.
+### 4. Menambahkan Validasi Sisi Server
+Menambahkan validasi PHP untuk setiap kolom:
+- Nama kegiatan harus 3 sampai 100 karakter.
+- Kategori harus sesuai dengan pilihan yang tersedia.
+- Tanggal pelaksanaan harus memiliki format tanggal yang valid.
+- Lokasi harus 3 sampai 150 karakter.
+- Deskripsi wajib diisi dan maksimal 500 karakter.
+
+Pesan kesalahan disimpan dalam session dan ditampilkan kembali pada halaman.
+
+### 5. Menerapkan Redirect Setelah POST
+Menerapkan pola Post/Redirect/Get (PRG) menggunakan `header("Location: index.php#rencana-kegiatan")` dan `exit` untuk menghindari pengiriman ulang formulir saat halaman dimuat kembali.
+
+### 6. Menampilkan Hasil Formulir
+Data yang berhasil dikirim disimpan dalam `$_SESSION["rencana"]` dan ditampilkan kembali di bawah formulir.
+
+Output menggunakan `htmlspecialchars()` untuk mengamankan data sebelum ditampilkan ke halaman HTML.
+
+### 7. Pengujian yang Telah Dilakukan
+
+| No. | Pengujian | Hasil |
+|---|---|---|
+| 1 | Membuka menu Rencana Kegiatan | Berhasil |
+| 2 | Mengirim formulir dengan data lengkap | Berhasil |
+| 3 | Mengirim nama kegiatan kosong untuk menguji validasi PHP | Berhasil |
+| 4 | Mengirim nama kegiatan kurang dari 3 karakter untuk menguji validasi PHP | Berhasil |
+| 5 | Menampilkan kembali data Rencana Kegiatan | Berhasil |
+
+### 8. Kesimpulan
+Fitur Formulir Rencana Kegiatan Mahasiswa berhasil ditambahkan. Formulir dapat menerima data, melakukan validasi menggunakan PHP, menyimpan data ke session, dan menampilkan kembali hasil pengiriman.
