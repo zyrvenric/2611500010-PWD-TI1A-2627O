@@ -104,6 +104,7 @@ switch ($programStudi) {
 
 		<nav>
 			<ul id="navMenu">
+				<li><a href="#rencana">Rencana Kegiatan</a></li>
 				<li><a href="#home">Beranda</a></li>
 				<li><a href="#about">Tentang</a></li>
 				<li><a href="#contact">Kontak</a></li>
