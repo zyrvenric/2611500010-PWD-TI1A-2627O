@@ -49,6 +49,10 @@ Output menggunakan `htmlspecialchars()` untuk mengamankan data sebelum ditampilk
 | 3 | Mengirim nama kegiatan kosong untuk menguji validasi PHP | Berhasil |
 | 4 | Mengirim nama kegiatan kurang dari 3 karakter untuk menguji validasi PHP | Berhasil |
 | 5 | Menampilkan kembali data Rencana Kegiatan | Berhasil |
+| 6 | Pengujian input script pada formulir Rencana Kegiatan | Berhasil |
+| 7 | Pengiriman formulir Kontak | Berhasil |
+| 8 | Pemeriksaan menu dan fitur lama | Berhasil |
 
 ### 8. Kesimpulan
+
 Fitur Formulir Rencana Kegiatan Mahasiswa berhasil ditambahkan. Formulir dapat menerima data, melakukan validasi menggunakan PHP, menyimpan data ke session, dan menampilkan kembali hasil pengiriman.
