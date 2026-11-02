@@ -238,6 +238,18 @@ switch ($programStudi) {
         Silakan isi formulir berikut untuk merencanakan
         kegiatan mahasiswa.
     </p>
+	<?php if (!empty($_SESSION["rencana_errors"])): ?>
+    <div class="form-error">
+        <ul>
+            <?php foreach ($_SESSION["rencana_errors"] as $error): ?>
+                <li>
+                    <?= htmlspecialchars($error, ENT_QUOTES, "UTF-8") ?>
+                </li>
+            <?php endforeach; ?>
+        </ul>
+    </div>
+    <?php unset($_SESSION["rencana_errors"]); ?>
+<?php endif; ?>
 
     <form id="rencanaForm"
           action="index.php"
@@ -254,7 +266,7 @@ switch ($programStudi) {
                 minlength="3"
                 maxlength="100"
                 placeholder="Masukkan nama kegiatan"
-                required>
+                
         </div>
 
         <div class="form-group">
