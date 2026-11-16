@@ -1,18 +1,19 @@
 <?php
 session_start();
 
-function bersihkanInput($teks) {
+function bersihkan($teks) 
+{
 	return htmlspecialchars($teks ?? "", ENT_QUOTES, "UTF-8");
 }
 
-echo"<h1>hai disana</h1>";
-echo "<script
+echo ("<p>hai disana</p>");
+echo "<script>
 		alert('hai');
 		</script>";
-echo bersihkan("<p>hai disana</p>");
-echo bersihkan("<script>
+echo bersihkan ("<p>hai disana</p>");
+echo bersihkan ("<script>
 		alert('hai');
-		</script>");
+		</script>";
 
 // P7: Memproses data formulir dan menyimpannya ke dalam session.
 
