@@ -1,6 +1,19 @@
 <?php
 session_start();
 
+function bersihkanInput($teks) {
+	return htmlspecialchars($teks ?? "", ENT_QUOTES, "UTF-8");
+}
+
+echo"<h1>hai disana</h1>";
+echo "<script
+		alert('hai');
+		</script>";
+echo bersihkan("<p>hai disana</p>");
+echo bersihkan("<script>
+		alert('hai');
+		</script>");
+
 // P7: Memproses data formulir dan menyimpannya ke dalam session.
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
