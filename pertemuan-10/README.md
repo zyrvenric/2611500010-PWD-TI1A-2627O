@@ -122,3 +122,10 @@ Pengaturan ekspor yang digunakan adalah:
 - Export method: Quick
 - Format: SQL
 Metode Quick digunakan untuk mengekspor seluruh tabel menggunakan pengaturan bawaan, sedangkan format SQL digunakan untuk menyimpan struktur tabel dan data dalam bentuk perintah SQL.
+22. G.2. Mengekspor Basis Data ke Format SQL
+Pada tahap ini, basis data `db_pwd_611500010` diekspor melalui phpMyAdmin menggunakan metode Cepat (Quick) dengan format SQL.
+
+Berkas hasil ekspor disimpan dengan nama `db_pwd_611500010.sql` dan ditempatkan di dalam direktori `pertemuan-10`.
+
+Hasil Pengujian:
+Berkas SQL berhasil diunduh dan ditempatkan pada direktori proyek pertemuan-10.
