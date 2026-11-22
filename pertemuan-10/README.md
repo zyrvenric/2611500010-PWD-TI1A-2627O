@@ -47,3 +47,8 @@ Struktur lengkap tabel yang akan dibuat adalah sebagai berikut:
 Hasil Pemeriksaan:
 
 Rancangan tabel memiliki sembilan atribut. Seluruh delapan data dari formulir Kontak P9 telah terwakili, tipe data disesuaikan dengan karakteristik masing-masing atribut, dan hanya kolom `id` yang ditetapkan sebagai PRIMARY KEY dengan AUTO_INCREMENT.
+10. Membuka phpMyAdmin
+Laragon berhasil dijalankan dengan layanan Apache dan MySQL aktif. Selanjutnya, phpMyAdmin dibuka melalui browser menggunakan alamat `http://localhost/phpmyadmin`.
+
+Hasil Pengujian:
+phpMyAdmin berhasil dibuka dan menampilkan antarmuka pengelolaan basis data MySQL. Server terhubung melalui `localhost:3306` dan daftar basis data berhasil ditampilkan.
