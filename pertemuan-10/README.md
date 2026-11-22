@@ -57,3 +57,9 @@ Pada tahap ini, basis data dibuat melalui phpMyAdmin dengan menggunakan nama ses
 Collation menggunakan pilihan bawaan yang tersedia pada phpMyAdmin.
 Hasil Pengujian:
 Basis data berhasil dibuat dan muncul pada daftar basis data phpMyAdmin.
+12. Membuat Basis Data MySQL
+Pada tahap ini, basis data dibuat melalui phpMyAdmin dengan nama `db_pwd_611500010`.
+Collation yang digunakan adalah `utf8mb4_0900_ai_ci`.
+
+Hasil Pengujian:
+basis data `db_pwd_611500010` berhasil dibuat melalui phpMyAdmin dan muncul pada daftar basis data.
