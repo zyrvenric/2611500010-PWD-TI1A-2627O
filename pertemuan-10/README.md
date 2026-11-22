@@ -77,3 +77,10 @@ Perintah `CREATE DATABASE` digunakan untuk membuat basis data, `USE` digunakan u
 
 Hasil Pemeriksaan:
 Perintah SQL telah dipelajari dan dibandingkan dengan hasil pembuatan basis data `db_pwd_611500010` serta tabel `tbl_kontak_611500010` melalui phpMyAdmin. Nama basis data, nama tabel, dan sembilan atribut telah sesuai dengan struktur yang dibuat pada tahap E.2 sampai E.4.
+15. Memeriksa Struktur Tabel dan Memperbaiki Ketidaksesuaian
+Pada tahap ini, dilakukan pemeriksaan struktur tabel `tbl_kontak_611500010` melalui tab Structure pada phpMyAdmin.
+
+Pemeriksaan meliputi jumlah atribut, nama kolom, tipe data, panjang karakter, serta penggunaan PRIMARY KEY dan AUTO_INCREMENT.
+
+Hasil Pengujian:
+Berdasarkan hasil pemeriksaan, tabel `tbl_kontak_611500010` memiliki sembilan atribut dengan tipe data dan panjang nilai yang sesuai rancangan. Kolom `id` juga telah menggunakan PRIMARY KEY dan AUTO_INCREMENT. Tidak ditemukan ketidaksesuaian pada struktur tabel.
