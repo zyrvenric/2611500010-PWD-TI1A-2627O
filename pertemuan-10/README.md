@@ -27,3 +27,23 @@ Tipe data disesuaikan dengan jenis informasi yang akan disimpan.
 Pada tabel `tbl_kontak_2611500010`, kolom `id` digunakan sebagai Primary Key karena setiap data harus memiliki identitas yang unik.
 Kolom `id` menggunakan tipe data `INT` dan fitur `AUTO_INCREMENT` agar nilainya bertambah secara otomatis ketika data baru dimasukkan ke dalam tabel.
 Dengan demikian, kolom `id` tidak perlu diisi secara manual saat menambahkan data.
+9. Memeriksa Rancangan Struktur Tabel
+Berdasarkan hasil perancangan pada D.1 sampai D.3, tabel Kontak P10 memiliki sembilan atribut, yaitu satu atribut `id` sebagai kunci utama dan delapan atribut yang berasal dari formulir Kontak P9.
+
+Struktur lengkap tabel yang akan dibuat adalah sebagai berikut:
+
+| No. | Atribut | Tipe Data | Ketentuan |
+|---|---|---|---|
+| 1 | `id` | INT | PRIMARY KEY, AUTO_INCREMENT |
+| 2 | `nama` | VARCHAR(50) | - |
+| 3 | `email` | VARCHAR(255) | - |
+| 4 | `semester` | TINYINT | - |
+| 5 | `tanggal` | DATE | - |
+| 6 | `jenis_pesan` | VARCHAR(20) | - |
+| 7 | `minat` | VARCHAR(50) | - |
+| 8 | `prodi` | VARCHAR(2) | - |
+| 9 | `pesan` | VARCHAR(300) | - |
+
+Hasil Pemeriksaan:
+
+Rancangan tabel memiliki sembilan atribut. Seluruh delapan data dari formulir Kontak P9 telah terwakili, tipe data disesuaikan dengan karakteristik masing-masing atribut, dan hanya kolom `id` yang ditetapkan sebagai PRIMARY KEY dengan AUTO_INCREMENT.
