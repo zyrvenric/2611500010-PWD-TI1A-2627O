@@ -115,3 +115,10 @@ Pemeriksaan meliputi nama, email, semester, tanggal, jenis pesan, minat, program
 
 Hasil Pengujian:
 Berdasarkan pemeriksaan data yang dimasukkan, seluruh nilai atribut telah sesuai dengan ketentuan. Tidak ditemukan ketidaksesuaian sehingga tidak diperlukan proses pengeditan data.
+21. G.1. Menentukan Pengaturan Ekspor
+Pada tahap ini, basis data `db_pwd_611500010` dipilih melalui phpMyAdmin untuk menentukan pengaturan ekspor.
+
+Pengaturan ekspor yang digunakan adalah:
+- Export method: Quick
+- Format: SQL
+Metode Quick digunakan untuk mengekspor seluruh tabel menggunakan pengaturan bawaan, sedangkan format SQL digunakan untuk menyimpan struktur tabel dan data dalam bentuk perintah SQL.
