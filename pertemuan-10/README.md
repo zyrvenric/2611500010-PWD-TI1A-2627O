@@ -70,3 +70,10 @@ Kolom `id` menggunakan tipe data `INT` sebagai `PRIMARY KEY` dan dilengkapi deng
 
 Hasil Pengujian:
 struktur tabel `tbl_kontak_611500010` berhasil dibuat. Seluruh sembilan kolom tampil pada halaman Struktur phpMyAdmin dengan tipe data yang sesuai. Kolom `id` juga berhasil ditetapkan sebagai `PRIMARY KEY` dan `AUTO_INCREMENT`.
+14. Mengenal Perintah DDL CREATE DATABASE dan CREATE TABLE
+pada tahap ini, dipelajari perintah SQL yang termasuk dalam kelompok DDL (Data Definition Language) untuk membuat dan memilih basis data serta membuat tabel.
+
+Perintah `CREATE DATABASE` digunakan untuk membuat basis data, `USE` digunakan untuk memilih basis data, sedangkan `CREATE TABLE` digunakan untuk membuat tabel beserta atributnya.
+
+Hasil Pemeriksaan:
+Perintah SQL telah dipelajari dan dibandingkan dengan hasil pembuatan basis data `db_pwd_611500010` serta tabel `tbl_kontak_611500010` melalui phpMyAdmin. Nama basis data, nama tabel, dan sembilan atribut telah sesuai dengan struktur yang dibuat pada tahap E.2 sampai E.4.
