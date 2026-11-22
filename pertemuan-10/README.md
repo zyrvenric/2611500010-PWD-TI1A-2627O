@@ -63,3 +63,10 @@ Collation yang digunakan adalah `utf8mb4_0900_ai_ci`.
 
 Hasil Pengujian:
 basis data `db_pwd_611500010` berhasil dibuat melalui phpMyAdmin dan muncul pada daftar basis data.
+13. Mengisi Struktur Tabel
+Pada tahap ini, struktur tabel `tbl_kontak_611500010` dibuat melalui phpMyAdmin dengan sembilan kolom sesuai rancangan pada tahap sebelumnya.
+
+Kolom `id` menggunakan tipe data `INT` sebagai `PRIMARY KEY` dan dilengkapi dengan `AUTO_INCREMENT`. Sementara itu, delapan kolom lainnya dibuat sesuai tipe data dan panjang nilai yang telah ditentukan.
+
+Hasil Pengujian:
+struktur tabel `tbl_kontak_611500010` berhasil dibuat. Seluruh sembilan kolom tampil pada halaman Struktur phpMyAdmin dengan tipe data yang sesuai. Kolom `id` juga berhasil ditetapkan sebagai `PRIMARY KEY` dan `AUTO_INCREMENT`.
