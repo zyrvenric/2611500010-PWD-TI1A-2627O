@@ -52,3 +52,8 @@ Laragon berhasil dijalankan dengan layanan Apache dan MySQL aktif. Selanjutnya, 
 
 Hasil Pengujian:
 phpMyAdmin berhasil dibuka dan menampilkan antarmuka pengelolaan basis data MySQL. Server terhubung melalui `localhost:3306` dan daftar basis data berhasil ditampilkan.
+11. Membuat Basis Data MySQL
+Pada tahap ini, basis data dibuat melalui phpMyAdmin dengan menggunakan nama sesuai ketentuan, yaitu db_pwd_2611500010.
+Collation menggunakan pilihan bawaan yang tersedia pada phpMyAdmin.
+Hasil Pengujian:
+Basis data berhasil dibuat dan muncul pada daftar basis data phpMyAdmin.
