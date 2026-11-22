@@ -7,3 +7,18 @@ NIM digunakan sebagai pembeda hasil pekerjaan setiap mahasiswa.
 Nama basis data yang akan digunakan: `db_pwd_NIM`
 Nama tabel yang akan digunakan: `tbl_kontak_NIM`
 6. penulisan nama basis data dan tabel berdasarkan NIM masing-masing.
+7. Menentukan Tipe Data Setiap Kolom
+Tipe data disesuaikan dengan jenis informasi yang akan disimpan.
+
+| Nama Kolom | Tipe Data |
+|---|---|
+| `id` | INT |
+| `nama` | VARCHAR(50) |
+| `email` | VARCHAR(255) |
+| `semester` | TINYINT |
+| `tanggal` | DATE |
+| `jenis_pesan` | VARCHAR(20) |
+| `minat` | VARCHAR(50) |
+| `prodi` | VARCHAR(2) |
+| `pesan` | VARCHAR(300) |
+
