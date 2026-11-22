@@ -96,3 +96,10 @@ Pada tahap ini, dilakukan pemeriksaan data pada tabel `tbl_kontak_611500010` men
 
 Hasil Pengujian:
 Data kontak yang sebelumnya dimasukkan melalui fasilitas Insert diperiksa melalui fasilitas Browse untuk memastikan data tersimpan di dalam tabel.
+18. F.2. Mengenal Perintah SQL INSERT sebagai Alternatif
+Perintah SQL INSERT digunakan untuk menambahkan data ke dalam tabel MySQL. Perintah ini termasuk dalam kelompok DML (Data Manipulation Language).
+
+Berdasarkan hasil pemasukan data melalui phpMyAdmin, perintah INSERT mencantumkan nama tabel, atribut, dan nilai data yang akan disimpan. Atribut `id` tidak perlu diisi secara manual karena menggunakan AUTO_INCREMENT.
+
+Hasil Pengujian:
+Struktur perintah SQL INSERT telah dipelajari dan disesuaikan dengan sembilan atribut pada tabel `tbl_kontak_611500010`.
