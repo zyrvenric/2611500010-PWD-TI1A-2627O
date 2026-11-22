@@ -22,3 +22,8 @@ Tipe data disesuaikan dengan jenis informasi yang akan disimpan.
 | `prodi` | VARCHAR(2) |
 | `pesan` | VARCHAR(300) |
 
+8. Menentukan Primary Key dan Auto Increment
+
+Pada tabel `tbl_kontak_2611500010`, kolom `id` digunakan sebagai Primary Key karena setiap data harus memiliki identitas yang unik.
+Kolom `id` menggunakan tipe data `INT` dan fitur `AUTO_INCREMENT` agar nilainya bertambah secara otomatis ketika data baru dimasukkan ke dalam tabel.
+Dengan demikian, kolom `id` tidak perlu diisi secara manual saat menambahkan data.
