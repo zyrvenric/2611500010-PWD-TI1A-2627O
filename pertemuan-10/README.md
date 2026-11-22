@@ -84,3 +84,10 @@ Pemeriksaan meliputi jumlah atribut, nama kolom, tipe data, panjang karakter, se
 
 Hasil Pengujian:
 Berdasarkan hasil pemeriksaan, tabel `tbl_kontak_611500010` memiliki sembilan atribut dengan tipe data dan panjang nilai yang sesuai rancangan. Kolom `id` juga telah menggunakan PRIMARY KEY dan AUTO_INCREMENT. Tidak ditemukan ketidaksesuaian pada struktur tabel.
+16. F.1. Memasukkan Data Menggunakan Fasilitas Insert
+Pada tahap ini, data kontak dimasukkan ke dalam tabel `tbl_kontak_611500010` menggunakan fasilitas Tambahkan (Insert) pada phpMyAdmin.
+
+Data yang dimasukkan meliputi nama, email, semester, tanggal, jenis pesan, minat, program studi, dan pesan. Kolom `id` dibiarkan kosong karena menggunakan AUTO_INCREMENT.
+
+Hasil Pengujian:
+Data berhasil ditambahkan ke dalam tabel. phpMyAdmin menampilkan pesan bahwa satu baris berhasil ditambahkan dengan nomor baris baru 1.
