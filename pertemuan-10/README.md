@@ -129,3 +129,10 @@ Berkas hasil ekspor disimpan dengan nama `db_pwd_611500010.sql` dan ditempatkan 
 
 Hasil Pengujian:
 Berkas SQL berhasil diunduh dan ditempatkan pada direktori proyek pertemuan-10.
+23. G.3. Memeriksa Berkas Hasil Ekspor
+Pada tahap ini, berkas `db_pwd_611500010.sql` diperiksa menggunakan Visual Studio Code untuk memastikan struktur tabel dan data awal telah ikut diekspor.
+
+Pemeriksaan dilakukan dengan mencari perintah `CREATE TABLE` dan `INSERT INTO`, kemudian mencocokkan nama tabel, sembilan atribut, serta data awal dengan hasil yang terdapat di phpMyAdmin.
+
+Hasil Pengujian:
+Berkas SQL berhasil memuat struktur tabel `tbl_kontak_611500010` dengan sembilan atribut. Data awal juga berhasil tercantum melalui perintah `INSERT INTO`. Selain itu, pengaturan PRIMARY KEY dan AUTO_INCREMENT pada kolom `id` tercantum melalui perintah `ALTER TABLE`. Hasil ekspor sesuai dengan struktur dan data yang telah dibuat sebelumnya.
