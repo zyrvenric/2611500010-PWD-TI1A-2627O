@@ -108,3 +108,10 @@ Pada tahap ini, fasilitas Browse pada phpMyAdmin digunakan untuk melihat data ya
 
 Hasil Pengujian:
 Data awal diperiksa melalui tab Browse untuk memastikan seluruh atribut ditampilkan, nilai `id` terbentuk secara otomatis, dan nilai pada kolom `minat` tampil sesuai data yang dimasukkan.
+20. F.4. Memeriksa Kesesuaian Data dan Memperbaiki Ketidaksesuaian
+Pada tahap ini, dilakukan pemeriksaan terhadap data yang tersimpan di dalam tabel `tbl_kontak_611500010` agar sesuai dengan karakteristik atribut dan ketentuan formulir Kontak P9.
+
+Pemeriksaan meliputi nama, email, semester, tanggal, jenis pesan, minat, program studi, dan pesan.
+
+Hasil Pengujian:
+Berdasarkan pemeriksaan data yang dimasukkan, seluruh nilai atribut telah sesuai dengan ketentuan. Tidak ditemukan ketidaksesuaian sehingga tidak diperlukan proses pengeditan data.
