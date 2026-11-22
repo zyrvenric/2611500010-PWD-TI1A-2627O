@@ -6,4 +6,4 @@
 NIM digunakan sebagai pembeda hasil pekerjaan setiap mahasiswa.
 Nama basis data yang akan digunakan: `db_pwd_NIM`
 Nama tabel yang akan digunakan: `tbl_kontak_NIM`
-6. 
+6. penulisan nama basis data dan tabel berdasarkan NIM masing-masing.
