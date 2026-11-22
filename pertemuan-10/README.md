@@ -91,3 +91,8 @@ Data yang dimasukkan meliputi nama, email, semester, tanggal, jenis pesan, minat
 
 Hasil Pengujian:
 Data berhasil ditambahkan ke dalam tabel. phpMyAdmin menampilkan pesan bahwa satu baris berhasil ditambahkan dengan nomor baris baru 1.
+17. F.2. Memeriksa Data Menggunakan Fasilitas Browse
+Pada tahap ini, dilakukan pemeriksaan data pada tabel `tbl_kontak_611500010` menggunakan fasilitas Jelajahi (Browse) di phpMyAdmin.
+
+Hasil Pengujian:
+Data kontak yang sebelumnya dimasukkan melalui fasilitas Insert diperiksa melalui fasilitas Browse untuk memastikan data tersimpan di dalam tabel.
