@@ -103,3 +103,8 @@ Berdasarkan hasil pemasukan data melalui phpMyAdmin, perintah INSERT mencantumka
 
 Hasil Pengujian:
 Struktur perintah SQL INSERT telah dipelajari dan disesuaikan dengan sembilan atribut pada tabel `tbl_kontak_611500010`.
+19. F.3. Memeriksa Data Menggunakan Fasilitas Browse
+Pada tahap ini, fasilitas Browse pada phpMyAdmin digunakan untuk melihat data yang telah tersimpan di dalam tabel `tbl_kontak_611500010`.
+
+Hasil Pengujian:
+Data awal diperiksa melalui tab Browse untuk memastikan seluruh atribut ditampilkan, nilai `id` terbentuk secara otomatis, dan nilai pada kolom `minat` tampil sesuai data yang dimasukkan.
