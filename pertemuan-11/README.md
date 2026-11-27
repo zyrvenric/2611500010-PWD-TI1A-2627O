@@ -39,3 +39,21 @@ Melakukan pengujian penanganan kegagalan koneksi dengan mengubah sementara nama 
 Saat diuji melalui browser, aplikasi menampilkan pesan `Koneksi ke basis data gagal.`.
 
 Setelah pengujian, nama database dikembalikan menjadi `db_pwd_611500010`. Pengujian ulang menunjukkan bahwa pesan kegagalan tidak lagi muncul.
+10. D7 Mendokumentasikan Hasil dan Perkembangan Tahap Koneksi
+Pada tahap ini dilakukan pemeriksaan akhir terhadap proses pembuatan dan pengujian koneksi PHP dengan MySQL menggunakan MySQLi.
+
+Hasil pemeriksaan:
+File koneksi.php telah dibuat dan berisi konfigurasi koneksi database.
+Parameter host, username, password, dan database telah diperiksa.
+Penggunaan mysqli_report(MYSQLI_REPORT_OFF) telah diterapkan.
+Koneksi database menggunakan fungsi mysqli_connect().
+Pengujian koneksi berhasil telah dilakukan.
+Pengujian kegagalan koneksi telah dilakukan.
+Nama database telah dikembalikan ke nama yang benar.
+File sementara uji_koneksi.php telah dihapus.
+11. E1 Memuat Berkas koneksi.php Menggunakan require_once()
+- Memastikan berkas `koneksi.php` tersedia dalam direktori yang sama dengan `index.php`.
+- Menyiapkan perintah `require_once("koneksi.php");` untuk memuat berkas koneksi.
+- Perintah tersebut digunakan agar variabel `$koneksi` dapat digunakan oleh `index.php`.
+
+Hasil pemeriksaan: Berkas `koneksi.php` tersedia dalam direktori yang sama dengan `index.php`.
