@@ -117,3 +117,15 @@ if (!$hasil) {
 ```
 
 Pengujian dilakukan dengan mengubah sementara nama tabel menjadi `tbl_tabel_tidak_tersedia`. Hasil pengujian menampilkan pesan `Kueri SELECT gagal dijalankan.` Setelah pengujian, nama tabel dikembalikan menjadi `tbl_kontak_611500010`.
+20. F5 Mengambil Hasil Kueri Menggunakan mysqli_fetch_assoc()
+Menambahkan fungsi `mysqli_fetch_assoc()` pada berkas `index.php` untuk mengambil data hasil kueri SELECT dalam bentuk larik asosiatif.
+
+```php
+// P11: Mengambil hasil kueri sebagai larik asosiatif.
+$dataKontak = [];
+
+while ($baris = mysqli_fetch_assoc($hasil)) {
+    $dataKontak[] = $baris;
+}
+```
+Variabel `$dataKontak` digunakan untuk menampung seluruh baris data kontak. Setiap baris disimpan sebagai larik asosiatif berdasarkan nama kolom tabel.
