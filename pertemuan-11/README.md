@@ -25,3 +25,11 @@ Koneksi menggunakan parameter host, username, password, dan nama database yang t
 Menambahkan percabangan `if` untuk memeriksa keberhasilan koneksi. Jika koneksi gagal, fungsi `die()` akan menghentikan proses PHP dan menampilkan pesan:
 
 `Koneksi ke basis data gagal.`
+8. D5 Memeriksa dan Menguji Keberhasilan Koneksi
+Melakukan pengujian koneksi PHP ke MySQL menggunakan berkas sementara `uji_koneksi.php`.
+
+Pengujian dilakukan melalui browser dan berhasil menampilkan pesan:
+
+`Koneksi ke basis data berhasil.`
+
+Setelah pengujian selesai, berkas sementara `uji_koneksi.php` dihapus agar tidak menjadi bagian dari artefak akhir P11.
