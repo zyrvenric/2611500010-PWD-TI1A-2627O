@@ -78,3 +78,11 @@ Hasil pemeriksaan: Pemanggilan berkas koneksi dan pemeriksaan kegagalan koneksi 
 - Memastikan pesan "Koneksi ke basis data gagal." tidak muncul.
 
 Hasil pengujian: Halaman utama aplikasi berhasil ditampilkan tanpa pesan kegagalan koneksi PHP dengan MySQL.
+15. E5 Mendokumentasikan Hasil dan Perkembangan Tahap Integrasi
+- Memeriksa kembali pemanggilan `koneksi.php` pada `index.php`.
+- Memastikan konfigurasi koneksi pada `koneksi.php` tetap menggunakan basis data yang benar.
+- Mendokumentasikan alur pemuatan berkas koneksi menggunakan `require_once()`.
+- Mencatat hasil pengujian integrasi PHP dengan MySQL.
+- Memastikan perubahan dokumentasi telah disimpan dan dikirim ke repositori GitHub.
+
+Hasil pemeriksaan: Integrasi koneksi PHP dengan MySQL berhasil. Halaman utama dapat ditampilkan tanpa pesan kegagalan koneksi.
