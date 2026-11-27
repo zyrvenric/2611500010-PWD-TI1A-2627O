@@ -71,3 +71,10 @@ Hasil pemeriksaan: Berkas `index.php` telah memuat `fungsi.php` dan `koneksi.php
 - Jika koneksi berhasil, proses pada `index.php` dapat dilanjutkan dan variabel `$koneksi` tersedia untuk digunakan.
 
 Hasil pemeriksaan: Pemanggilan berkas koneksi dan pemeriksaan kegagalan koneksi telah diperiksa.
+14. E4 Menguji Integrasi PHP dengan MySQL
+- Memastikan layanan Apache dan MySQL berjalan melalui Laragon.
+- Mengakses halaman utama melalui peramban menggunakan alamat lokal proyek P11.
+- Memeriksa tampilan halaman utama aplikasi.
+- Memastikan pesan "Koneksi ke basis data gagal." tidak muncul.
+
+Hasil pengujian: Halaman utama aplikasi berhasil ditampilkan tanpa pesan kegagalan koneksi PHP dengan MySQL.
