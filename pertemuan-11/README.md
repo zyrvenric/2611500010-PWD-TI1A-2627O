@@ -146,3 +146,9 @@ Setelah pengujian berhasil, kode `var_dump()` dihapus dari `index.php`.
 - Pengujian kondisi tabel kosong berhasil. Aplikasi menampilkan pesan "Belum ada data kontak yang tersimpan."
 - Data awal berhasil dimasukkan kembali melalui perintah SQL.
 - Setelah data dikembalikan, data kontak kembali tampil pada halaman aplikasi.
+23. H2 Ekspor Basis Data Praktikum
+- Basis data yang digunakan: `db_pwd_611500010`.
+- Tabel yang diekspor: `tbl_kontak_611500010`.
+- Berkas hasil ekspor: `db_pwd_611500010.sql`.
+- Berkas SQL telah diperiksa dan memuat struktur tabel serta data kontak.
+- Berkas hasil ekspor telah ditempatkan pada direktori `pertemuan-11`.
