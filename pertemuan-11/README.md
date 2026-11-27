@@ -64,3 +64,10 @@ Hasil pemeriksaan: Berkas `koneksi.php` tersedia dalam direktori yang sama denga
 - Variabel `$koneksi` tersedia untuk digunakan pada proses pengelolaan data basis data.
 
 Hasil pemeriksaan: Berkas `index.php` telah memuat `fungsi.php` dan `koneksi.php` menggunakan `require_once()`.
+13. E3 Memeriksa Ketersediaan Koneksi pada Halaman Utama
+- Memastikan `index.php` memuat `koneksi.php` menggunakan `require_once()`.
+- Memastikan pemeriksaan koneksi `$koneksi` tetap berada di dalam `koneksi.php`.
+- Jika koneksi gagal, perintah `die()` akan menghentikan proses PHP dan menampilkan pesan kegagalan.
+- Jika koneksi berhasil, proses pada `index.php` dapat dilanjutkan dan variabel `$koneksi` tersedia untuk digunakan.
+
+Hasil pemeriksaan: Pemanggilan berkas koneksi dan pemeriksaan kegagalan koneksi telah diperiksa.
