@@ -106,3 +106,14 @@ $hasil = mysqli_query($koneksi, $sql);
 ```
 
 Variabel `$hasil` digunakan untuk menampung hasil eksekusi kueri SELECT.
+19. F4 Memeriksa dan Menguji Keberhasilan Kueri SELECT
+Menambahkan pemeriksaan keberhasilan kueri SELECT pada berkas `index.php` menggunakan kondisi `if (!$hasil)`.
+
+```php
+// P11: Memeriksa keberhasilan kueri SELECT.
+if (!$hasil) {
+    die("Kueri SELECT gagal dijalankan.");
+}
+```
+
+Pengujian dilakukan dengan mengubah sementara nama tabel menjadi `tbl_tabel_tidak_tersedia`. Hasil pengujian menampilkan pesan `Kueri SELECT gagal dijalankan.` Setelah pengujian, nama tabel dikembalikan menjadi `tbl_kontak_611500010`.
