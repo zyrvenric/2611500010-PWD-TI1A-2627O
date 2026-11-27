@@ -13,3 +13,15 @@ Menentukan empat parameter koneksi pada berkas `koneksi.php`, yaitu:
 - Database: `db_pwd_611500010`
 
 Nama database disesuaikan dengan database yang telah dibuat pada pertemuan-10.
+6. D3 Menggunakan mysqli_report(MYSQLI_REPORT_OFF)
+Menambahkan fungsi `mysqli_report(MYSQLI_REPORT_OFF);` pada berkas `koneksi.php` setelah deklarasi parameter koneksi.
+
+Pengaturan ini menonaktifkan pelaporan kesalahan otomatis MySQLi sehingga kegagalan koneksi dapat diperiksa secara eksplisit menggunakan percabangan `if`.
+7. D4 Membuat Koneksi Menggunakan mysqli_connect()
+Menambahkan fungsi `mysqli_connect()` pada berkas `koneksi.php` untuk menghubungkan PHP dengan basis data MySQL.
+
+Koneksi menggunakan parameter host, username, password, dan nama database yang telah ditentukan sebelumnya.
+
+Menambahkan percabangan `if` untuk memeriksa keberhasilan koneksi. Jika koneksi gagal, fungsi `die()` akan menghentikan proses PHP dan menampilkan pesan:
+
+`Koneksi ke basis data gagal.`
