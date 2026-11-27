@@ -98,4 +98,11 @@ Menambahkan kueri SQL SELECT pada berkas `index.php` untuk mengambil seluruh dat
 // P11: Mengambil data kontak dari basis data menggunakan operasi READ.
 $sql = "SELECT * FROM tbl_kontak_611500010";
 ```
-18. 
+18. F3 Menjalankan Kueri Menggunakan mysqli_query()
+Menambahkan fungsi `mysqli_query()` pada berkas `index.php` untuk menjalankan kueri SELECT menggunakan koneksi database dari variabel `$koneksi`.
+
+```php
+$hasil = mysqli_query($koneksi, $sql);
+```
+
+Variabel `$hasil` digunakan untuk menampung hasil eksekusi kueri SELECT.
