@@ -86,3 +86,16 @@ Hasil pengujian: Halaman utama aplikasi berhasil ditampilkan tanpa pesan kegagal
 - Memastikan perubahan dokumentasi telah disimpan dan dikirim ke repositori GitHub.
 
 Hasil pemeriksaan: Integrasi koneksi PHP dengan MySQL berhasil. Halaman utama dapat ditampilkan tanpa pesan kegagalan koneksi.
+16. F1  Mengenal Perintah SQL SELECT
+- SELECT digunakan untuk mengambil data.
+- * berarti seluruh kolom.
+- FROM menentukan tabel sumber data.
+- Contoh modul: SELECT * FROM tbl_kontak_nim;
+17. F2 Menentukan Kueri SELECT pada Tabel Kontak
+Menambahkan kueri SQL SELECT pada berkas `index.php` untuk mengambil seluruh data kontak dari tabel `tbl_kontak_611500010` pada database `db_pwd_611500010`.
+
+```php
+// P11: Mengambil data kontak dari basis data menggunakan operasi READ.
+$sql = "SELECT * FROM tbl_kontak_611500010";
+```
+18. 
