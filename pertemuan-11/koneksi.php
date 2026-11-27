@@ -9,3 +9,8 @@ $database = "db_pwd_611500010";
 mysqli_report(MYSQLI_REPORT_OFF);
 // Menghubungkan PHP dengan basis data MySQL.
 $koneksi = mysqli_connect($host, $user, $password, $database);
+
+// Memeriksa keberhasilan koneksi.
+if (!$koneksi) {
+    die("Koneksi ke basis data gagal.");
+}

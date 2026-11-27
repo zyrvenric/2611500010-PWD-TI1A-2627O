@@ -33,3 +33,9 @@ Pengujian dilakukan melalui browser dan berhasil menampilkan pesan:
 `Koneksi ke basis data berhasil.`
 
 Setelah pengujian selesai, berkas sementara `uji_koneksi.php` dihapus agar tidak menjadi bagian dari artefak akhir P11.
+9. D6 Menguji Penanganan Kegagalan Koneksi
+Melakukan pengujian penanganan kegagalan koneksi dengan mengubah sementara nama database menjadi `db_tidak_tersedia`.
+
+Saat diuji melalui browser, aplikasi menampilkan pesan `Koneksi ke basis data gagal.`.
+
+Setelah pengujian, nama database dikembalikan menjadi `db_pwd_611500010`. Pengujian ulang menunjukkan bahwa pesan kegagalan tidak lagi muncul.
