@@ -57,3 +57,10 @@ File sementara uji_koneksi.php telah dihapus.
 - Perintah tersebut digunakan agar variabel `$koneksi` dapat digunakan oleh `index.php`.
 
 Hasil pemeriksaan: Berkas `koneksi.php` tersedia dalam direktori yang sama dengan `index.php`.
+12. E2 Mengintegrasikan Koneksi pada index.php
+- Menambahkan pemanggilan `require_once("koneksi.php");` pada bagian awal berkas `index.php`.
+- Pemanggilan `fungsi.php` tetap dipertahankan.
+- `koneksi.php` digunakan untuk membuat koneksi PHP dengan MySQL.
+- Variabel `$koneksi` tersedia untuk digunakan pada proses pengelolaan data basis data.
+
+Hasil pemeriksaan: Berkas `index.php` telah memuat `fungsi.php` dan `koneksi.php` menggunakan `require_once()`.
