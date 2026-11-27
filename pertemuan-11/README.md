@@ -140,3 +140,9 @@ Hasil pengujian menunjukkan:
   `tanggal`, `jenis_pesan`, `minat`, `prodi`, dan `pesan`.
 
 Setelah pengujian berhasil, kode `var_dump()` dihapus dari `index.php`.
+22. G5 Pengujian Penyajian Data Kontak dari Basis Data
+- Data kontak berhasil ditampilkan pada halaman web menggunakan data dari tabel `tbl_kontak_611500010`.
+- Seluruh atribut kontak berhasil ditampilkan sesuai isi basis data.
+- Pengujian kondisi tabel kosong berhasil. Aplikasi menampilkan pesan "Belum ada data kontak yang tersimpan."
+- Data awal berhasil dimasukkan kembali melalui perintah SQL.
+- Setelah data dikembalikan, data kontak kembali tampil pada halaman aplikasi.
