@@ -129,3 +129,14 @@ while ($baris = mysqli_fetch_assoc($hasil)) {
 }
 ```
 Variabel `$dataKontak` digunakan untuk menampung seluruh baris data kontak. Setiap baris disimpan sebagai larik asosiatif berdasarkan nama kolom tabel.
+21. F6 Memeriksa Hasil Pengambilan Data
+Pengujian dilakukan menggunakan `var_dump()` untuk memeriksa isi
+variabel `$dataKontak`.
+
+Hasil pengujian menunjukkan:
+- Jumlah data kontak yang berhasil diambil: 1 data.
+- Setiap data kontak memiliki 9 kolom.
+- Kolom yang berhasil diambil: `id`, `nama`, `email`, `semester`,
+  `tanggal`, `jenis_pesan`, `minat`, `prodi`, dan `pesan`.
+
+Setelah pengujian berhasil, kode `var_dump()` dihapus dari `index.php`.
